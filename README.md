@@ -65,3 +65,61 @@ underwater world, to a desert.
 1. Prototype of core gameplay. Implement level 1 player movement, like walking and jumping. Make the basic level layout, this consists of making the obstacle course and the obstacles on it. Create some placeholder UI for the first milestone. The preferred outcome is a playable level 1. 
 2. Design and implement the rest of the levels. Implement the powerups. An important note is on creating the characters and designing the background and obstacles, as well as making the rest of the levels playable. 
 3. Final game polishing. Game testing and bug fixing. As well as adding additional features to make it nicer, like background music, sound effects.
+
+
+
+
+# Game Developemnt Blog Post 3 - March 26th
+
+## Prepare GitHub Structure
+
+- As for now, we have a .gitignore file and readme.md file. Readme.md file was updated on the main branch, but in future when we start coding the game, the updates will be done through a separate branch.
+- As we start implementing, each person will be given a task for which they will make a branch with latest main update, and work on their own branch.
+- We will either implement PR(pull request) rules into GitHub or will just have an agreement that the other person has to review the PR, before merging it into the main.
+
+## Detail Description of Levels
+
+We decided to write out a detailed description of each level during this period because we did not start our implementation soon enough to have Level 1 done for BlogPost #3. 
+
+We are going to take this time (week 13) to go through a “2D Beginner: Adventure Game” learning path, and after we will apply that knowledge and start making our game.
+
+### Level  1
+
+The forest level. The platform will be an obstacle course made so the player can go through it by walking and jumping over obstacles while collecting a number of leaves.
+
+Player Mechanics - walking (left, right), jumping (including physics), collecting 10 leaves to gain a life for the final stage of fighting a final boss.
+
+Platform Mechanics - moving tiles, vine-covered tiles that slow down the player
+
+Platform - A pallet of tiles with a dark green and brown theme to match the forest setting, have a tile the player will need to jump on/over. They can vary from grassy forest ground to wooden tiles representing fallen logs that the player can jump over.
+
+### Level 2
+
+The cave level. The platform will be an obstacle course, which a player has to go through by walking, jumping (from the previous level), crouching under a low ceiling, and pushing the rocks to create a path, while collecting the gems to gain life.
+
+Player Mechanic - in addition to the previous level, a mechanic of crouching, and pushing/moving the objects
+
+Platform Mechanic - turning on the light ( there will be torches in the cave, where the light will turn on when the player is in close proximity), slippery rock tiles that make the player move faster
+
+Platform - A pallet of tiles with a beige and brown colour theme to match the cave setting, it will still have some tiles that the player will need to go over, but also will have tiles that the player needs to go under (crouch).  They will vary from stone to slippery stone and some water dripping from ceilings. 
+
+### Level 3
+
+The underwater level. The background is the bottom of an ocean and the player can move up, down, left, and right. In this level, the player collects treasure coins. There will be several different coloured corals serving as obstacles, and there will be puffer fish being flown at the player by ocean currents. The player can have fun while popping the puffer fish with a magic wand that shoots light bubbles.
+
+Player Mechanic- in this level, all the previous mechanics are translated into being able to swim in all directions. A new mechanic will be the ability to shoot the enemies (puffer fish) with a magic wand that shoots light bubbles.
+
+Platform Mechanics - The puffer fish will act as the enemy and when pushed by the occasional currents, it will puff.   There will also be some corals entering and exiting the screen.
+
+Platform-  An underwater background with corals of different colours and orange puffer fish. There will be some visual effects for the currents.
+
+### Level 4
+
+The desert level. The platform will be an obstacle course made so that the player can use all mechanics from previous levels, as well as a new flying mechanic. This level includes Monster Sphinx as a final boss. The player will fight the final boss, using all of the mechanics from the previous levels and this level. The three lives acquired in the past levels will help the player defeat the Sphinx. 
+
+Player Mechanic -  in addition to the previous level, the player can fly ( perhaps, for a limited amount of time)
+
+Platform Mechanics-  there will be moving snakes that show up from the sandy ground
+
+Platform- A desertic landscape with a pyramid-themed background. The last boss is a Monster Sphinx. There will be tiles in beige and orange colours that will represent the desert, as well as some that look like those that have to be avoided.
+
