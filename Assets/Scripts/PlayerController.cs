@@ -18,6 +18,8 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.1f;
     private bool isGrounded;
 
+    private GameObject portal;
+
     void Start()
     {
         MoveAction.Enable();
@@ -29,7 +31,8 @@ public class PlayerController : MonoBehaviour
         move = MoveAction.ReadValue<Vector2>();
 
         CheckIfGrounded();
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded) {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        {
             Jump();
         }
     }
@@ -49,4 +52,37 @@ public class PlayerController : MonoBehaviour
         Vector2 position = rigidbody2d.position + new Vector2(move.x, 0) * speed * Time.fixedDeltaTime;
         rigidbody2d.MovePosition(position);
     }
+
+    void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    private void LevelTransition()
+    {
+        if ((SceneManager.GetActiveScene().name == "Level1") && collision.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene("Level_2");
+        }
+        else ((SceneManager.GetActiveScene().name == "Level2") && collision.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene("Level_3");
+        }
+        else ((SceneManager.GetActiveScene().name == "Level3") && collision.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene("Level_4");
+        }
+        else ((SceneManager.GetActiveScene().name == "Level4") && collision.gameObject.CompareTag("Portal"))
+        {
+            SceneManager.LoadScene("Epilogue");
+        }
+    }
+
+   // private void EpilogueEnd()
+   // {
+    //    if (SceneManager.GetActiveScene().name == "Epilogue")
+     //       SceneManager.LoadScene("");
+  //  }
+
 }
