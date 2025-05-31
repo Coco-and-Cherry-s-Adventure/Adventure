@@ -29,7 +29,8 @@ public class PlayerController : MonoBehaviour
         move = MoveAction.ReadValue<Vector2>();
 
         CheckIfGrounded();
-        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded) {
+        if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
+        {
             Jump();
         }
     }
@@ -49,4 +50,5 @@ public class PlayerController : MonoBehaviour
         Vector2 position = rigidbody2d.position + new Vector2(move.x, 0) * speed * Time.fixedDeltaTime;
         rigidbody2d.MovePosition(position);
     }
+public void OnTriggerEnter(Collider other)
 }
