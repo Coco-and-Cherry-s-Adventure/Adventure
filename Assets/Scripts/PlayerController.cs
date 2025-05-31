@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public float groundCheckRadius = 0.1f;
     private bool isGrounded;
 
+    public GameObject gemObject;
+
     void Start()
     {
         MoveAction.Enable();
@@ -29,6 +32,7 @@ public class PlayerController : MonoBehaviour
         move = MoveAction.ReadValue<Vector2>();
 
         CheckIfGrounded();
+
         if (Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
         {
             Jump();
@@ -50,5 +54,21 @@ public class PlayerController : MonoBehaviour
         Vector2 position = rigidbody2d.position + new Vector2(move.x, 0) * speed * Time.fixedDeltaTime;
         rigidbody2d.MovePosition(position);
     }
-public void OnTriggerEnter(Collider other)
+
+
+     private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Portal1"))
+        {
+            LevelTransition();
+        }
+
+    }   
+
+    private void LevelTransition()
+  {
+    SceneManager.LoadScene("Level2");
+  }
+
 }
+
