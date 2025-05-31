@@ -123,39 +123,3 @@ Platform Mechanics-  there will be moving snakes that show up from the sandy gro
 
 Platform- A desertic landscape with a pyramid-themed background. The last boss is a Monster Sphinx. There will be tiles in beige and orange colours that will represent the desert, as well as some that look like those that have to be avoided.
 
-
-
-# Game Development Blog Post 4 - April 27th
-
-
-## Iva
-
-As mentioned in the last blog post, I have went through the “2D Beginner: Adventure Game”. I mostly focused on, and revisited first 3 modules of it. This is where I learned about sprites, tiles and tilemaps, as well as about player movement and the physics of it.
-
-## Level1
-Before I started the implementation of the level, I made an empty unity project, deleted all the unnecessary folders that should not be pushed into git repository. Even though our .gitignore has the lines to ignore these files I decided it would be better and more clean to delete them. After setting this up on my machine I pushed into main. This was the first and last commit that would be pushed from main to main.
-
-Afterwards I made a new branch from main called level1-setup. We decided to follow a convention of naming our branches by level-functionality. By having this naming convention we are able to describe what is going to be the main purpose of this branch and this will make the development process cleaner.
-In this branch, as the name states, I imported the environment art we found from https://segart.itch.io/2d-16px-grassland-tileset. By referencing the 2D tutorial, I made a tileset, and painted my tilemap. I also imported our pngs of the players. The main player character (Cherry) was drawn by Catarina, and the cat (Coco) by me in pixelorama. As of now we will be using this imported art, we want to focus on the functionality of the game before the art, and later in the process, when we are satisfied with the functionality we will try and draw our own tileset as well. After I was finished the pull request was made and we merged it to main.
-
-The next step was making the player character (Cherry) move. Therefore I made a new level1-playerMovement branch. I started of by making her move left and right (like I learned from 2D unity tutorial). I had no problems implementing this part. Afterwards, I applied Box Colliders to the objects and made sure that my character walks on the ground, and cannot fall inside it. The decorations are not colliding, as I imagine them being a part of the background, rather than an obstacle. The ground tiles were used as obstacles where the player Cherry will bump into it, and have to jump on/over it. As I was trying to implement this jumping functionality I got stuck. First I tried to “blindly” make this, by following the same pattern it took to make the player walk left and right. Soon I discovered this was not enough, as I had to apply some physics to it, add a ground layer to my unity project and a ground check to know when the player is on the ground. I watched a few “make 2d unity player jump in under 1 minute” videos, and tried a few similar methods of adding this ground layer, in my script having a jump force, ground check and ground layer. Unfortunately by the end of this week, Cherry is unable to jump. In the future my first task will be to fix this functionality, and make sure she is able to jump, and then continue on with the progress of the game.
-
-
-##Catarina
-
-As mentioned in class, I also went through the tutorial on 2D game Developing, which allowed me to have the basic knowledge to build the game.  Because we decided to divide the work in levels, I was in charge of starting to develop level 2.
-
-##Level2
-
-Firstly I tried to set up the connection between both scenes for the levelling up functionality because I had done something similar on the Roll-a-ball assignment. Now the levels are added to the scene list in correct order- Level 1 (0) and Level 2 (1) and there is some extra logic on the PlayerController script for leveling up. This functionality will be delivered with the characters collision with a portal object (literally), which will exist in the future.
-
-As level 2 has the same basics as level 1, we started by duplicating level 1 and in Hierarchy, eliminate the GameObjects that would not be necessary for level 2. Then I tried to set up a background and tiles, also using some of the art mentioned above. I am currently trying to figure out how to set up the cave parallax. Bellow I will list some websites I am using to research about the topic. Next in the next future will be finishing the setup for level 2, open another branch to add some more mechanics like rock obstacle moving function, some special lighting and also the ability for the main character to crounch.
-
-References:
-https://www.bing.com/videos/riverview/relatedvideo?&q=tutorial+on+how+to+create+a+2d+game+unity&&mid=0DE3ABE3044438C809C70DE3ABE3044438C809C7&&mcid=1BE2E886C8A8456E886336F40A2E8347&FORM=VRDGAR
-
-https://www.encora.com/insights/how-to-take-advantage-of-parallax-in-programming-and-video-games
-
-https://blog.yarsalabs.com/parallax-effect-in-unity-2d/
-
-
