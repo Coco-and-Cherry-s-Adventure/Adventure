@@ -5,42 +5,38 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Rigidbody2D body;
+    [SerializeField] private float speed;
+    private bool grounded;
+    private int jumpCount = 0;
+    private int maxJumps = 1;
+
+    private void Awake()
     {
-        
+        body = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        float horizontal = 0.0f;
-    if (Keyboard.current.leftArrowKey.isPressed)
-    {
-        horizontal = -1.0f;
- 	    }
-    else if (Keyboard.current.rightArrowKey.isPressed)
-    {
-        horizontal = 1.0f;
+        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
+
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+            Jump();
     }
-    Debug.Log(horizontal);
 
-
-    float vertical = 0.0f;
-    if (Keyboard.current.upArrowKey.isPressed)
+    private void Jump()
     {
-        vertical = 1.0f;
+        body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
+        jumpCount++;
+        grounded = false;
     }
-    else if (Keyboard.current.downArrowKey.isPressed)
+    
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        vertical = -1.0f;
-    }
-    Debug.Log(vertical);
-
-
-    Vector2 position = transform.position;
-    position.x = position.x + 0.1f * horizontal;
-    position.y = position.y + 0.1f * vertical;
-    transform.position = position;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            grounded = true;
+            jumpCount = 0;
+        }
     }
 }
