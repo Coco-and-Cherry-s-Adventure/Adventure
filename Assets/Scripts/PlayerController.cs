@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     //health
     public int maxHealth = 10;
     int currentHealth;
+    public int health { get { return currentHealth; } }
 
     private void Awake()
     {
@@ -53,5 +54,6 @@ public class PlayerController : MonoBehaviour
     {
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
 }
