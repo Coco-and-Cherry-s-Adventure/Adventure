@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
     public int maxHealth = 10;
     int currentHealth;
     public int health { get { return currentHealth; } }
+    //audio
+    [SerializeField] private AudioClip jumpSound;
 
     private void Awake()
     {
@@ -36,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
+        SoundManager.instance.PlaySound(jumpSound);
         body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
         jumpCount++;
         grounded = false;
