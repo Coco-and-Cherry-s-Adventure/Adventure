@@ -1,0 +1,7 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement name="StarHealthUI" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/VFX/StarHealthUI.png?fileID=6737674148682714483&amp;guid=2bcc14f45142213478a998b739bf1273&amp;type=3#StarHealthUI_0&quot;); background-size: 64% 64%; -unity-background-scale-mode: scale-to-fit; height: 463px; width: 347px; position: absolute; top: -152px; left: 0; right: 546px; bottom: 137px;">
+        <engine:VisualElement name="HealthContainer" style="flex-grow: 0; position: absolute; top: 161px; left: 170px; right: 18px; bottom: 138px; -unity-background-scale-mode: scale-to-fit;">
+            <engine:VisualElement name="Health" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/VFX/Health.png?fileID=-8630923909508717717&amp;guid=bfaf672a2de341f40a3d373a3be25c67&amp;type=3#Health_0&quot;); -unity-background-scale-mode: scale-to-fit; height: 143px; width: 162px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
