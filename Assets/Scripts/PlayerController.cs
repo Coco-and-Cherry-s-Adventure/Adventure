@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
         SoundManager.instance.PlaySound(shrinkSound);
         if(shrinkCount % 2 == 0)
         {
-             transform.localScale = new Vector2(1.0f, 1.0f);
+            transform.localScale = new Vector2(1.0f, 1.0f);
         }
         else
         {
