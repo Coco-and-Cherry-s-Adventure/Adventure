@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e03fbba4873bd3b4b9ffb551d5230573
+guid: dd72259cd63b49e4a919468b973cd822
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -207216301659541506
-    second: parallax1_0
+      213: 1816614541540220187
+    second: BG 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parallax1_0
+      name: BG 1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 199
+        width: 1280
+        height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: effa9eb1fd1df1df0800000000000000
-      internalID: -207216301659541506
+      spriteID: b1d505afc49e53910800000000000000
+      internalID: 1816614541540220187
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      parallax1_0: -207216301659541506
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
