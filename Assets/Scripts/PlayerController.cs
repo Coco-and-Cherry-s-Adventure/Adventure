@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     private bool grounded;
     private int jumpCount = 0;
-    private int maxJumps = 2;
+    private int maxJumps = 3;
     private int shrinkCount = 0;
     //health
     public int maxHealth = 10;
@@ -83,4 +83,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
+
+    
 }

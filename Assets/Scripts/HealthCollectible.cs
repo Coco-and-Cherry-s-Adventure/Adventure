@@ -5,7 +5,7 @@ public class HealthCollectible : MonoBehaviour
     [SerializeField] private AudioClip pickUpSound;
     [SerializeField] private float volume = 0.3f;
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void OnTriggerEnter2D(Collider2D other)
     {
         PlayerController controller = other.GetComponent<PlayerController>();
 
