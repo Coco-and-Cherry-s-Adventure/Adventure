@@ -10,14 +10,18 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float speed;
     private bool grounded;
     private int jumpCount = 0;
-    private int maxJumps = 1;
+    private int maxJumps = 2;
+    private int shrinkCount = 0;
     //health
     public int maxHealth = 10;
     int currentHealth;
     public int health { get { return currentHealth; } }
     //audio
     [SerializeField] private AudioClip jumpSound;
+    [SerializeField] private AudioClip shrinkSound;
 
+
+    
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -33,7 +37,13 @@ public class PlayerController : MonoBehaviour
         body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+        {
             Jump();
+        }    
+        else if( Input.GetKeyDown(KeyCode.DownArrow) && grounded)
+        {
+            Shrink();
+        }
     }
 
     private void Jump()
@@ -42,6 +52,20 @@ public class PlayerController : MonoBehaviour
         body.linearVelocity = new Vector2(body.linearVelocity.x, speed);
         jumpCount++;
         grounded = false;
+    }
+
+    private void Shrink()
+    {
+        SoundManager.instance.PlaySound(shrinkSound);
+        if(shrinkCount % 2 == 0)
+        {
+             transform.localScale = new Vector2(1.0f, 1.0f);
+        }
+        else
+        {
+            transform.localScale = new Vector2(0.5f, 0.5f);
+        }
+        shrinkCount++;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
