@@ -936,7 +936,7 @@ MonoBehaviour:
   speed: 7
   maxHealth: 10
   jumpSound: {fileID: 8300000, guid: 9c8f4334052d5bd4daf73c8d8cad7b8a, type: 3}
-  shrinkSound: {fileID: 0}
+  shrinkSound: {fileID: 8300000, guid: b86dfd21456d68843ab3118935faecba, type: 3}
 --- !u!50 &851147456
 Rigidbody2D:
   serializedVersion: 5
