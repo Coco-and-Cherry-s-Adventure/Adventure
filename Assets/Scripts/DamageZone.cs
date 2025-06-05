@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DamageZone : MonoBehaviour
 {
@@ -12,6 +13,12 @@ public class DamageZone : MonoBehaviour
         {
             SoundManager.instance.PlaySound(damageSound);
             controller.ChangeHealth(-1);
+            Restart();
         }
+    }
+
+      private void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
