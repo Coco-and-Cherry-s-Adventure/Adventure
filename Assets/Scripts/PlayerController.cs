@@ -37,13 +37,19 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        body.linearVelocity = new Vector2(Input.GetAxis("Horizontal") * speed, body.linearVelocity.y);
+        float horizontalInput = Input.GetAxis("Horizontal");
+        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);         
+        if (horizontalInput > 0f)
+            transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
+        else if (horizontalInput < 0f)
+            transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
+
 
         if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
         {
             Jump();
-        }    
-        else if( Input.GetKeyDown(KeyCode.DownArrow) && grounded)
+        }
+        else if (Input.GetKeyDown(KeyCode.DownArrow) && grounded)
         {
             Shrink();
         }
