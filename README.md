@@ -166,4 +166,20 @@ I did not have enough time to finish the enemy, so it does not move left to righ
 
 
 # Blog Post #6
-
+After months of planning, learning, coding, fixing bugs, and sometimes just staring at Unity in confusion, our game is finally finished! Our journey started from a simple Roll-a-Ball tutorial, where a sphere collects objects and avoids enemies. From that small beginning, it grew into a fully playable 4-level 2D adventure platformer starring Cherry, a brave girl, and her adorable cat companion Coco. They travel through a forest, a dark cave, a mysterious underwater world, and a harsh desert, all in a quest to help a lost kitten return home. 
+## Level 1:
+Forest This was our starting point. The forest level introduced basic mechanics—walking, jumping, and collecting leaves. The leaves act as lives, and when all are lost, the player restarts the level. We also implemented a smooth camera-follow feature and added a health HUD, giving players a clear view of their progress. The environment is made of tiles from a beautiful pixel-art set, with sounds and music setting the tone. Getting Cherry to jump correctly took longer than expected, but once we cracked the physics, it became the heart of our gameplay. 
+## Level 2: 
+Cave This level added more complexity. We introduced crouching, and light tiles. The background was trickier due to our attempts at implementing a parallax effect for a more immersive feel. We duplicated the forest scene to keep some base structure but modified it into a darker palette, more narrow paths, and added lighting mechanics using proximity triggers. We’re proud of how this level turned out—it feels different enough to be its own world, while still following the same game logic. 
+## Level 3: 
+Underwater This level gave us a chance to move away from the traditional platform layout and experiment with a new environment. Though the setting is underwater, Cherry retains her usual walking mechanics—navigating submerged tiles rather than swimming. She explores in all directions, collecting pearls while avoiding static (and eventually moving) purple fish. Originally, we intended the pufferfish to drift using a current-based movement system, but due to time constraints, they remain stationary as hazardous obstacles. A new sprite addition introduced here is Cherry’s magical wand. The level’s bright, colorful visuals enhance its playful, exploratory feel. 
+## Level 4: 
+Desert & Final Boss The final level combines all the mechanics learned before. We designed a large desert area with the Monster Sphinx, our final boss. Unfortunately, due to time constraints, the final boss mechanic is not available. 
+## Reflection 
+We’re extremely proud of what we created. This was our first full game, and while some features didn’t turn out exactly as we planned, the core vision stayed intact. The game feels personal—filled with our own art (Cherry and Coco were drawn by us!), original logic, and moments of trial and error. It’s also fun to play. We added a complete pause menu, background music that persists between scenes, and different sound effects to help the world feel alive. 
+Some lessons we learned: 
+*  Start simple, even if your ideas are big.
+*  Divide the work but make sure everyone understands the whole project.
+*  Art and functionality can live together—but prioritize mechanics early.
+*  Playtesting often reveals small bugs that feel huge to players.
+*  And finally, GitHub branches save friendships.
