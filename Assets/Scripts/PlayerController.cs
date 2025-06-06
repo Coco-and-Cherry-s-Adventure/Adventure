@@ -22,6 +22,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip shrinkSound;
     //winning
     [SerializeField] private AudioClip winSound;
+    public GameObject winPortal;
+    public GameObject winText;
+
     
 
     private void Awake()
@@ -32,6 +35,7 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         currentHealth = 0;
+        winText.SetActive(false);
     }
 
     void Update()
@@ -95,7 +99,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
 
-        if (other.gameObject.CompareTag("LevelUp"))
+        if (other.gameObject.CompareTag("LevelUp") || other.gameObject.CompareTag("Win"))
         {
             LevelTransition(other);
         }
@@ -126,7 +130,11 @@ public class PlayerController : MonoBehaviour
         }
         else if (portal.name == "Level4_portal")
         {
-            //text display saying you won
+            Debug.Log("You won!");
+            winText.SetActive(true);
+            SoundManager.instance.PlaySound(winSound);
+            Time.timeScale = 0; 
+           
         }
     }
 
