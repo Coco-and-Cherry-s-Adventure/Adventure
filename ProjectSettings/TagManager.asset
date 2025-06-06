@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - LevelUp
+  - Enemy
   - FloatingTnT
   - Win
   layers:
@@ -16,7 +17,7 @@ TagManager:
   - Water
   - UI
   - Ground
-  - 
+  - Enemy
   - 
   - 
   - 
