@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -83,4 +84,43 @@ public class PlayerController : MonoBehaviour
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHandler.instance.SetHealthValue(currentHealth / (float)maxHealth);
     }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+
+        if (other.gameObject.CompareTag("LevelUp"))
+        {
+            LevelTransition(other);
+        }
+    }
+
+
+    private void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+
+    private void LevelTransition(Collider2D portal)
+    {
+        if (portal.name == "Level1Portal")
+        {
+            SceneManager.LoadScene("Level2");
+
+        }
+        else if (portal.name == "Level2_portal")
+        {
+            SceneManager.LoadScene("Level3");
+
+        }
+        else if (portal.name == "Level3_portal")
+        {
+            SceneManager.LoadScene("Level4");
+        }
+        else if (portal.name == "Level4_portal")
+        {
+            SceneManager.LoadScene("Epilogue");
+        }
+    }
+
 }
