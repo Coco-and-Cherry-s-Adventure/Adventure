@@ -190,76 +190,49 @@ Some lessons we learned:
 
 ## References
 
- started a call that lasted an hour. — 4/22/2025 5:04 PM
-Iwa — 4/22/2025 5:26 PM
-https://segart.itch.io/
-itch.io
-Segart
-https://pxldev.itch.io/big-32x32-tileset
-itch.io
-Big 32x32 Tileset - A Repackaged Asset Pack by PxlDev, Team Melon
-Big 32x32 Tileset - A Repackaged Asset Pack by PxlDev, Team Melon
-CJ — 4/22/2025 5:48 PM
-Image
-Iwa
- started a call that lasted 13 minutes. — 4/27/2025 11:28 PM
-CJ — 5/31/2025 3:58 PM
-Image
-Image
-CJ — 6/1/2025 3:17 PM
-Image
-Image
-Image
-Iwa — 6/1/2025 6:15 PM
-http://www.walkerboystudio.com/wbstudio/project-2d-mario/
-Walker Boys Studio
-chadw
-Project 2D Mario
-Project 4: Mario 2D Mario 2D (Side Scroller) is the fourth of five Unity based game training projects. The projects are designed to grow in difficulty and scope. Each project should be successfully completed before moving to the next one. On completion of each project assignment, be sure to complete the presentation
-Image
-CJ — 6/2/2025 12:22 PM
-Image
-Image
-CJ — 6/2/2025 1:46 PM
-I am goign to take a while
-He is returning from a meeting supposedly
-CJ — 6/3/2025 8:44 AM
-Level 1 collectibles approved and ready to be merged to main
-Link to Doc:
-https://docs.google.com/document/d/13xYaMJMjSLZMG7AnMnWYDhN4oFK50H3gfPcQpeutoiM/edit?usp=sharing
+Click Sound - Sound Effect by <a href="https://pixabay.com/users/matthewvakaliuk73627-48347364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Matthew Vakalyuk</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Pixabay</a>
+https://pixabay.com/sound-effects/mouse-click-290204/
+
+Shrink Sound- Can by found at: https://pixabay.com/sound-effects/magic-spell-333896/
+
+Explosion Sound- Can be found at: https://pixabay.com/sound-effects/search/explosion%20game/
+
+Win Sound- Can by found at: https://pixabay.com/sound-effects/search/win%20sound%20game/
+
+
+
+Audio Tutorial - https://www.youtube.com/watch?v=7e6GJtm3FU4&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=11
+
+Font - Copyright 2001 The Silkscreen Project Authors (https://github.com/googlefonts/silkscreen)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org/
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+
+Pause Menu Tutorial - https://www.youtube.com/watch?v=2pk1PPlS5Xs&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=15
+
+Overral unity tutorial for 2D game - https://www.youtube.com/watch?v=on9nwbZngyw&list=PLPV2KyIb3jR6TFcFuzI2bB7TMNIIBpKMQ
+Color pallete inspo for the making of some of the characters - https://www.schemecolor.com/blue-yellow-and-red.php
+
+Tilesets:
+Level1 - https://segart.itch.io/2d-16px-grassland-tileset
+Level2-  https://segart.itch.io/2d-16px-cave-tileset
+Level3 - https://segart.itch.io/2d-16px-underwater-tileset
+Level4- https://www.gameart2d.com/free-desert-platformer-tileset.html
+
+Background Music - Music by <a href="https://pixabay.com/users/moodmode-33139253/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Vlad Krotov</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Pixabay</a>
+https://pixabay.com/music/video-games-8-bit-dream-land-142093/
+
+Jump Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">Pixabay</a>
+https://pixabay.com/sound-effects/toy-button-105724/
+
+Collect Collectible Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">Pixabay</a>
+https://pixabay.com/sound-effects/decidemp3-14575/
+
+Respawn Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">Pixabay</a>
+https://pixabay.com/sound-effects/pixel-death-66829/
+
 Player Movement Tutorial (left, right, jump) - https://www.youtube.com/watch?v=TcranVQUQ5U&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=1
 
 Camera Work - https://www.youtube.com/watch?v=PA5DgZfRsAM&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=6
 
 Setup of the project (the tilemap and painting of tileset), Collectibles Tutorial - https://learn.unity.com/course/2d-beginner-adventure-game?version=2022.3
-
-Tilesets:
-Level1 - https://segart.itch.io/2d-16px-grassland-tileset
-Level3 - https://segart.itch.io/2d-16px-underwater-tileset
-
-Background Music - Music by <a href="https://pixabay.com/users/moodmode-33139253/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Vlad Krotov</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Pixabay</a>
-- https://pixabay.com/music/video-games-8-bit-dream-land-142093/
-
-Jump Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">Pixabay</a>
-- https://pixabay.com/sound-effects/toy-button-105724/
-
-Collect Collectible Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">Pixabay</a>
-- https://pixabay.com/sound-effects/decidemp3-14575/
-
-Respawn Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">Pixabay</a>
-- https://pixabay.com/sound-effects/pixel-death-66829/
-
-Click Sound - Sound Effect by <a href="https://pixabay.com/users/matthewvakaliuk73627-48347364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Matthew Vakalyuk</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Pixabay</a>
-- https://pixabay.com/sound-effects/mouse-click-290204/
-
-Audio Tutorial - https://www.youtube.com/watch?v=7e6GJtm3FU4&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=11
-
-Font - Copyright 2001 The Silkscreen Project Authors (https://github.com/googlefonts/silkscreen)
-This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org
-
-SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
-
-Pause Menu Tutorial - https://www.youtube.com/watch?v=2pk1PPlS5Xs&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=15
-message.txt
-4 KB
-
