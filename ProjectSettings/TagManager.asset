@@ -8,6 +8,7 @@ TagManager:
   - LevelUp
   - Death
   - FloatingTnT
+  - explosion
   layers:
   - Default
   - TransparentFX
