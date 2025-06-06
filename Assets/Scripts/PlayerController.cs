@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     private int jumpCount = 0;
     private int maxJumps = 2;
     private int shrinkCount = 0;
+    private Vector2 movementInput;
+
     //health
     public int maxHealth = 10;
     int currentHealth;
@@ -22,7 +24,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip shrinkSound;
     //winning
     [SerializeField] private AudioClip winSound;
-    
+
+
 
     private void Awake()
     {
@@ -37,21 +40,35 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
-        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);         
+        body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
         if (horizontalInput > 0f)
             transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
         else if (horizontalInput < 0f)
             transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
 
 
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+
+        Gamepad gamepad = Gamepad.current;
+
+
+        if (gamepad == null) return;
+
+
+        if (gamepad.buttonWest.wasPressedThisFrame && grounded)
         {
-            Jump();
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow) && grounded)
-        {
+            Debug.Log("X button pressed");
             Shrink();
         }
+
+
+        if (gamepad.buttonNorth.wasPressedThisFrame && jumpCount < maxJumps)
+        {
+            Debug.Log("Y button pressed");
+            Jump();
+        }
+        
+
+
     }
 
     private void Jump()
