@@ -20,7 +20,9 @@ public class PlayerController : MonoBehaviour
     //audio
     [SerializeField] private AudioClip jumpSound;
     [SerializeField] private AudioClip shrinkSound;
-
+    //winning
+    [SerializeField] private AudioClip winSound;
+    public 
 
     
     private void Awake()
@@ -119,7 +121,7 @@ public class PlayerController : MonoBehaviour
         }
         else if (portal.name == "Level4_portal")
         {
-            SceneManager.LoadScene("Epilogue");
+            //text display saying you won
         }
     }
 
