@@ -1,4 +1,5 @@
 # Adventure
+https://www.youtube.com/watch?v=UFj7HGwR3UE
 
 # Roll-a-ball
 
@@ -123,3 +124,115 @@ Platform Mechanics-  there will be moving snakes that show up from the sandy gro
 
 Platform- A desertic landscape with a pyramid-themed background. The last boss is a Monster Sphinx. There will be tiles in beige and orange colours that will represent the desert, as well as some that look like those that have to be avoided.
 
+# Game Development Blog Post 4 - April 27th
+## Iva
+As mentioned in the last blog post, I have went through the “2D Beginner: Adventure Game”. I mostly focused on, and revisited first 3 modules of it. This is where I learned about sprites, tiles and tilemaps, as well as about player movement and the physics of it.
+
+## Level1
+Before I started the implementation of the level, I made an empty unity project, deleted all the unnecessary folders that should not be pushed into git repository. Even though our .gitignore has the lines to ignore these files I decided it would be better and more clean to delete them. After setting this up on my machine I pushed into main. This was the first and last commit that would be pushed from main to main.
+
+Afterwards I made a new branch from main called level1-setup. We decided to follow a convention of naming our branches by level-functionality. By having this naming convention we are able to describe what is going to be the main purpose of this branch and this will make the development process cleaner. In this branch, as the name states, I imported the environment art we found from https://segart.itch.io/2d-16px-grassland-tileset. By referencing the 2D tutorial, I made a tileset, and painted my tilemap. I also imported our pngs of the players. The main player character (Cherry) was drawn by Catarina, and the cat (Coco) by me in pixelorama. As of now we will be using this imported art, we want to focus on the functionality of the game before the art, and later in the process, when we are satisfied with the functionality we will try and draw our own tileset as well. After I was finished the pull request was made and we merged it to main.
+
+The next step was making the player character (Cherry) move. Therefore I made a new level1-playerMovement branch. I started of by making her move left and right (like I learned from 2D unity tutorial). I had no problems implementing this part. Afterwards, I applied Box Colliders to the objects and made sure that my character walks on the ground, and cannot fall inside it. The decorations are not colliding, as I imagine them being a part of the background, rather than an obstacle. The ground tiles were used as obstacles where the player Cherry will bump into it, and have to jump on/over it. As I was trying to implement this jumping functionality I got stuck. First I tried to “blindly” make this, by following the same pattern it took to make the player walk left and right. Soon I discovered this was not enough, as I had to apply some physics to it, add a ground layer to my unity project and a ground check to know when the player is on the ground. I watched a few “make 2d unity player jump in under 1 minute” videos, and tried a few similar methods of adding this ground layer, in my script having a jump force, ground check and ground layer. Unfortunately by the end of this week, Cherry is unable to jump. In the future my first task will be to fix this functionality, and make sure she is able to jump, and then continue on with the progress of the game.
+
+## Catarina
+
+As mentioned in class, I also went through the tutorial on 2D game Developing, which allowed me to have the basic knowledge to build the game. Because we decided to divide the work in levels, I was in charge of starting to develop level 2.
+
+## Level2
+
+Firstly I tried to set up the connection between both scenes for the levelling up functionality because I had done something similar on the Roll-a-ball assignment. Now the levels are added to the scene list in correct order- Level 1 (0) and Level 2 (1) and there is some extra logic on the PlayerController script for leveling up. This functionality will be delivered with the characters collision with a portal object (literally), which will exist in the future.
+
+As level 2 has the same basics as level 1, we started by duplicating level 1 and in Hierarchy, eliminate the GameObjects that would not be necessary for level 2. Then I tried to set up a background and tiles, also using some of the art mentioned above. I am currently trying to figure out how to set up the cave parallax. Bellow I will list some websites I am using to research about the topic. Next in the next future will be finishing the setup for level 2, open another branch to add some more mechanics like rock obstacle moving function, some special lighting and also the ability for the main character to crounch.
+
+References: https://www.bing.com/videos/riverview/relatedvideo?&q=tutorial+on+how+to+create+a+2d+game+unity&&mid=0DE3ABE3044438C809C70DE3ABE3044438C809C7&&mcid=1BE2E886C8A8456E886336F40A2E8347&FORM=VRDGAR
+
+https://www.encora.com/insights/how-to-take-advantage-of-parallax-in-programming-and-video-games
+
+https://blog.yarsalabs.com/parallax-effect-in-unity-2d/
+
+# Blog Post #5
+## Iva Mucic June 6th
+
+This week, I continued developing level 1 world by fixing the left and right movement and finally implementing the jumping functionality. I also added a camera follow script so the camera now smoothly tracks Cherry as she moves.
+We decided to merge the sprites of Cherry and Coco since Coco will only follow Cherry passively, not act as a second player. This change made the movement logic cleaner.
+I added the leaf collectible and linked it to a new health system, when the player picks up a leaf, health increases, and when falling into water or a damage zone, one leaf is lost. To reflect this, I also added a HUD showing current health status.
+I then implemented a SoundManager and added sounds for background music, jumping, collecting, and damage. The background music now plays persistently across scenes using a LoadingManager.
+Finally, I added a full pause menu with options to resume, change volume, restart, or quit, and began working on level 3’s tilemap, decorations, and enemy setup.
+On level 3 the player is able to go through the level, jumping and collecting the pearls.
+I did not have enough time to finish the enemy, so it does not move left to right it just stays in place. But if the player collides with it then they have to restart the level.
+
+## Catarina
+
+The past week my goal was to finish level 2 and make level 4. When developing level 2, as mentioned in the reflections, I had a lot of difficulties due to what we believe was a mixture of confusing branches and not knowing. This was an issue that followed me until the day before the handin. Despite all- I focused on improving the level 2 design every time I had to reset it. For the level 2, the goal was to give it a cave feel, from the gems and the tnt objects, to the intricate path. 
+I also worked on the level transition logic, where I set the portal object so that as soon as the player collides, they would make the scenes change automatically. 
+For the last level, the idea was to implement an enemy Ai, which would be the sphinx that now serves as a background. Te pyramid was set to be the portal for the epilogue, a plan that now is archived for future development.
+The shrink ability was coded on a principle of when the input from the player is detected, the player shrinks to half it's size, going back to normal after another input.
+
+# Blog Post #6
+After months of planning, learning, coding, fixing bugs, and sometimes just staring at Unity in confusion, our game is finally finished! Our journey started from a simple Roll-a-Ball tutorial, where a sphere collects objects and avoids enemies. From that small beginning, it grew into a fully playable 4-level 2D adventure platformer starring Cherry, a brave girl, and her adorable cat companion Coco. They travel through a forest, a dark cave, a mysterious underwater world, and a harsh desert, all in a quest to help a lost kitten return home. 
+## Level 1:
+Forest This was our starting point. The forest level introduced basic mechanics—walking, jumping, and collecting leaves. The leaves act as lives, and when all are lost, the player restarts the level. We also implemented a smooth camera-follow feature and added a health HUD, giving players a clear view of their progress. The environment is made of tiles from a beautiful pixel-art set, with sounds and music setting the tone. Getting Cherry to jump correctly took longer than expected, but once we cracked the physics, it became the heart of our gameplay. 
+## Level 2: 
+Cave This level added more complexity. We introduced crouching, and light tiles. The background was trickier due to our attempts at implementing a parallax effect for a more immersive feel. We duplicated the forest scene to keep some base structure but modified it into a darker palette, more narrow paths, and added lighting mechanics using proximity triggers. We’re proud of how this level turned out—it feels different enough to be its own world, while still following the same game logic. 
+## Level 3: 
+Underwater This level gave us a chance to move away from the traditional platform layout and experiment with a new environment. Though the setting is underwater, Cherry retains her usual walking mechanics—navigating submerged tiles rather than swimming. She explores in all directions, collecting pearls while avoiding static (and eventually moving) purple fish. Originally, we intended the pufferfish to drift using a current-based movement system, but due to time constraints, they remain stationary as hazardous obstacles. A new sprite addition introduced here is Cherry’s magical wand. The level’s bright, colorful visuals enhance its playful, exploratory feel. 
+## Level 4: 
+Desert & Final Boss The final level combines all the mechanics learned before. We designed a large desert area with the Monster Sphinx, our final boss. Unfortunately, due to time constraints, the final boss mechanic is not available. 
+## Reflection 
+We’re extremely proud of what we created. This was our first full game, and while some features didn’t turn out exactly as we planned, the core vision stayed intact. The game feels personal—filled with our own art (Cherry and Coco were drawn by us!), original logic, and moments of trial and error. It’s also fun to play. We added a complete pause menu, background music that persists between scenes, and different sound effects to help the world feel alive. 
+Some lessons we learned: 
+*  Start simple, even if your ideas are big.
+*  Divide the work but make sure everyone understands the whole project.
+*  Art and functionality can live together—but prioritize mechanics early.
+*  Playtesting often reveals small bugs that feel huge to players.
+*  And finally, GitHub branches save friendships.
+
+## References
+
+Click Sound - Sound Effect by <a href="https://pixabay.com/users/matthewvakaliuk73627-48347364/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Matthew Vakalyuk</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=290204">Pixabay</a>
+https://pixabay.com/sound-effects/mouse-click-290204/
+
+Shrink Sound- Can by found at: https://pixabay.com/sound-effects/magic-spell-333896/
+
+Explosion Sound- Can be found at: https://pixabay.com/sound-effects/search/explosion%20game/
+
+Win Sound- Can by found at: https://pixabay.com/sound-effects/search/win%20sound%20game/
+
+
+
+Audio Tutorial - https://www.youtube.com/watch?v=7e6GJtm3FU4&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=11
+
+Font - Copyright 2001 The Silkscreen Project Authors (https://github.com/googlefonts/silkscreen)
+This Font Software is licensed under the SIL Open Font License, Version 1.1 . This license is copied below, and is also available with a FAQ at: https://openfontlicense.org/
+
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+
+Pause Menu Tutorial - https://www.youtube.com/watch?v=2pk1PPlS5Xs&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=15
+
+Overral unity tutorial for 2D game - https://www.youtube.com/watch?v=on9nwbZngyw&list=PLPV2KyIb3jR6TFcFuzI2bB7TMNIIBpKMQ
+Color pallete inspo for the making of some of the characters - https://www.schemecolor.com/blue-yellow-and-red.php
+
+Tilesets:
+Level1 - https://segart.itch.io/2d-16px-grassland-tileset
+Level2-  https://segart.itch.io/2d-16px-cave-tileset
+Level3 - https://segart.itch.io/2d-16px-underwater-tileset
+Level4- https://www.gameart2d.com/free-desert-platformer-tileset.html
+
+Background Music - Music by <a href="https://pixabay.com/users/moodmode-33139253/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Vlad Krotov</a> from <a href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=142093">Pixabay</a>
+https://pixabay.com/music/video-games-8-bit-dream-land-142093/
+
+Jump Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=105724">Pixabay</a>
+https://pixabay.com/sound-effects/toy-button-105724/
+
+Collect Collectible Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=14575">Pixabay</a>
+https://pixabay.com/sound-effects/decidemp3-14575/
+
+Respawn Sound - Sound Effect by <a href="https://pixabay.com/users/freesound_community-46691455/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">freesound_community</a> from <a href="https://pixabay.com/sound-effects//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=66829">Pixabay</a>
+https://pixabay.com/sound-effects/pixel-death-66829/
+
+Player Movement Tutorial (left, right, jump) - https://www.youtube.com/watch?v=TcranVQUQ5U&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=1
+
+Camera Work - https://www.youtube.com/watch?v=PA5DgZfRsAM&list=PLgOEwFbvGm5o8hayFB6skAfa8Z-mw4dPV&index=6
+
+Setup of the project (the tilemap and painting of tileset), Collectibles Tutorial - https://learn.unity.com/course/2d-beginner-adventure-game?version=2022.3
