@@ -22,9 +22,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private AudioClip shrinkSound;
     //winning
     [SerializeField] private AudioClip winSound;
-    public 
-
     
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
@@ -121,7 +120,7 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("Level3");
 
         }
-        else if (portal.name == "Level3_portal")
+        else if (portal.name == "Level3_portal_0")
         {
             SceneManager.LoadScene("Level4");
         }
