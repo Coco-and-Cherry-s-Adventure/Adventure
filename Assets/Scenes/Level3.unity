@@ -1725,7 +1725,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 314072489}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LeftEdge
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
@@ -7054,9 +7054,9 @@ GameObject:
   - component: {fileID: 1273282511}
   - component: {fileID: 1273282514}
   - component: {fileID: 1273282515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FishEnemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10684,7 +10684,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1878596286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RightEdge
   m_TagString: Untagged
   m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
