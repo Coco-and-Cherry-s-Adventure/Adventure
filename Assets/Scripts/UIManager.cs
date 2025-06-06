@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
@@ -33,6 +34,18 @@ public class UIManager : MonoBehaviour
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (pauseScreen.activeInHierarchy)
+                PauseGame(false);
+            else
+                PauseGame(true);
+        }
+
+        Gamepad gamepad = Gamepad.current;
+
+        if (gamepad == null) return;
+
+        if (gamepad.buttonEast.wasPressedThisFrame)
         {
             if (pauseScreen.activeInHierarchy)
                 PauseGame(false);
